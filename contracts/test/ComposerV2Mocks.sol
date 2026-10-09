@@ -43,32 +43,37 @@ contract MockComposerOFT is IOFT {
     bool public immutable override approvalRequired;
     bool public failSend;
     bool public failSendWithoutReason;
+    uint256 public dust;
     uint256 public nativeFee = 0.001 ether;
 
-    constructor(address token_, address endpoint_, bool approvalRequired_) {
-        token = token_; endpoint = endpoint_; approvalRequired = approvalRequired_;
-    }
+    constructor(address token_, address endpoint_, bool approvalRequired_) { token = token_; endpoint = endpoint_; approvalRequired = approvalRequired_; }
     function setFailSend(bool value) external { failSend = value; }
     function setFailSendWithoutReason(bool value) external { failSendWithoutReason = value; }
+    function setDust(uint256 value) external { dust = value; }
+    function setNativeFee(uint256 value) external { nativeFee = value; }
     function oftVersion() external pure override returns (bytes4, uint64) { return (0x02e49c2c, 1); }
     function sharedDecimals() external pure override returns (uint8) { return 6; }
-    function quoteOFT(SendParam calldata p) external pure override returns (OFTLimit memory limit, OFTFeeDetail[] memory details, OFTReceipt memory receipt) {
+    function quoteOFT(SendParam calldata p) external view override returns (OFTLimit memory limit, OFTFeeDetail[] memory details, OFTReceipt memory receipt) {
         uint256 sent = p.amountLD - (p.amountLD % 10);
+        uint256 received = sent - dust;
         limit = OFTLimit(0, type(uint256).max);
         details = new OFTFeeDetail[](0);
-        receipt = OFTReceipt(sent, sent);
+        receipt = OFTReceipt(sent, received);
     }
-    function quoteSend(SendParam calldata, bool) external view override returns (MessagingFee memory) {
-        return MessagingFee(nativeFee, 0);
-    }
+    function quoteSend(SendParam calldata, bool) external view override returns (MessagingFee memory) { return MessagingFee(nativeFee, 0); }
     function send(SendParam calldata p, MessagingFee calldata fee, address) external payable override returns (MessagingReceipt memory mr, OFTReceipt memory receipt) {
-        if (failSendWithoutReason) assembly { revert(0, 0) }
+        if (failSendWithoutReason) {
+            assembly {
+                revert(0, 0)
+            }
+        }
         require(!failSend, "send failed");
         require(msg.value == fee.nativeFee && fee.nativeFee == nativeFee, "fee");
         uint256 sent = p.amountLD - (p.amountLD % 10);
+        uint256 received = sent - dust;
         if (approvalRequired) require(IERC20(token).transferFrom(msg.sender, address(this), sent), "transfer");
         mr = MessagingReceipt(keccak256(abi.encode(p, block.number)), 1, fee);
-        receipt = OFTReceipt(sent, sent);
+        receipt = OFTReceipt(sent, received);
     }
 }
 
@@ -77,3 +82,5 @@ contract MockComposerEndpoint {
         ILayerZeroComposer(composer).lzCompose{ value: msg.value }(from, guid, message, address(this), "");
     }
 }
+
+contract RejectNativeRefund { receive() external payable { revert("no native"); } }

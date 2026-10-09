@@ -29,6 +29,18 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
 
     uint64 public constant OFT_ENCODING_VERSION = 1;
     uint256 private constant NATIVE_REFUND_GAS = 30_000;
+    bytes32 private constant TOKEN_REFUND_TYPEHASH = keccak256(
+        "TokenRefund(address token,address claimant,address recipient,uint256 amount,uint256 nonce,uint256 deadline)"
+    );
+    bytes32 private constant NATIVE_REFUND_TYPEHASH = keccak256(
+        "NativeRefund(address claimant,address recipient,uint256 amount,uint256 nonce,uint256 deadline)"
+    );
+    bytes32 private constant EIP712_DOMAIN_TYPEHASH = keccak256(
+        "EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"
+    );
+    bytes32 private constant EIP712_NAME_HASH = keccak256("Anubis MultiHop Composer");
+    bytes32 private constant EIP712_VERSION_HASH = keccak256("1");
+    bytes4 private constant ERC1271_MAGICVALUE = 0x1626ba7e;
 
     struct Route {
         address token;
@@ -63,8 +75,11 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
     mapping(address nextOft => mapping(uint32 dstEid => bool allowed)) public allowedDestinations;
     mapping(address token => mapping(address account => uint256 amount)) public tokenRefunds;
     mapping(address token => uint256 amount) public totalTokenRefunds;
+    mapping(address token => bool) public protectedRouteTokens;
+    mapping(address claimant => uint256 nonce) public tokenRefundNonces;
     mapping(address account => uint256 amount) public nativeRefunds;
     uint256 public totalNativeRefunds;
+    mapping(address claimant => uint256 nonce) public nativeRefundNonces;
 
     event RouteSet(address indexed sourceOft, address indexed token, address indexed nextOft, bool enabled);
     event RouteRemoved(address indexed sourceOft);
@@ -91,6 +106,10 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
     event TokenRefundWithdrawn(address indexed token, address indexed account, uint256 amount);
     event NativeRefundAccrued(address indexed account, uint256 amount);
     event NativeRefundWithdrawn(address indexed account, uint256 amount);
+    event TokenRefundWithdrawnTo(
+        address indexed token, address indexed claimant, address indexed recipient, uint256 amount
+    );
+    event NativeRefundWithdrawnTo(address indexed claimant, address indexed recipient, uint256 amount);
     event SurplusRecovered(address indexed token, address indexed to, uint256 amount);
     event NativeSurplusRecovered(address indexed to, uint256 amount);
 
@@ -131,6 +150,11 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
         if (sourceOft == address(0) || token == address(0) || nextOft == address(0)) {
             revert InvalidRouteConfiguration();
         }
+        // A route token may still be held by the Composer for an unprocessed or
+        // retryable compose message after the route is disabled or removed.
+        // Keep this marker permanently set so those funds can never be treated
+        // as owner-recoverable surplus.
+        protectedRouteTokens[token] = true;
         Route memory current = routes[sourceOft];
         bool pureDisable = !enabled && current.token == token && current.nextOft == nextOft;
         if (!pureDisable) {
@@ -391,8 +415,7 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
 
     function _tryTokenTransfer(address token, address to, uint256 amount) internal returns (bool) {
         if (to == address(0)) return false;
-        (bool ok, bytes memory data) = token.call(abi.encodeCall(IERC20.transfer, (to, amount)));
-        return ok && (data.length == 0 || (data.length == 32 && abi.decode(data, (bool))));
+        return IERC20(token).trySafeTransfer(to, amount);
     }
 
     function _tryNativeTransfer(address to, uint256 amount) internal returns (bool) {
@@ -402,24 +425,126 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
     }
 
     function withdrawTokenRefund(address token) external nonReentrant {
-        uint256 amount = tokenRefunds[token][msg.sender];
-        tokenRefunds[token][msg.sender] = 0;
+        _withdrawTokenRefund(token, msg.sender, msg.sender);
+    }
+
+    /// @notice Withdraw a token refund to an alternate recipient authorized by the claimant.
+    /// @dev Supports EOAs and ERC-1271 contract accounts through SignatureChecker.
+    function withdrawTokenRefundTo(
+        address token,
+        address claimant,
+        address recipient,
+        uint256 deadline,
+        bytes calldata signature
+    ) external nonReentrant {
+        if (recipient == address(0) || block.timestamp > deadline) revert InvalidRecipient();
+        uint256 amount = tokenRefunds[token][claimant];
+        uint256 nonce = tokenRefundNonces[claimant];
+        bytes32 digest = _hashRefundTypedData(
+            keccak256(abi.encode(TOKEN_REFUND_TYPEHASH, token, claimant, recipient, amount, nonce, deadline))
+        );
+        if (!_isValidSignature(claimant, digest, signature)) revert InvalidRecipient();
+        tokenRefundNonces[claimant] = nonce + 1;
+        _withdrawTokenRefund(token, claimant, recipient);
+        emit TokenRefundWithdrawnTo(token, claimant, recipient, amount);
+    }
+
+    function _withdrawTokenRefund(address token, address claimant, address recipient) internal {
+        uint256 amount = tokenRefunds[token][claimant];
+        tokenRefunds[token][claimant] = 0;
         totalTokenRefunds[token] -= amount;
-        IERC20(token).safeTransfer(msg.sender, amount);
-        emit TokenRefundWithdrawn(token, msg.sender, amount);
+        IERC20(token).safeTransfer(recipient, amount);
+        emit TokenRefundWithdrawn(token, claimant, amount);
     }
 
     function withdrawNativeRefund() external nonReentrant {
-        uint256 amount = nativeRefunds[msg.sender];
-        nativeRefunds[msg.sender] = 0;
+        _withdrawNativeRefund(msg.sender, payable(msg.sender));
+    }
+
+    /// @notice Withdraw a native refund to an alternate recipient authorized by the claimant.
+    /// @dev Supports EOAs and ERC-1271 contract accounts through SignatureChecker.
+    function withdrawNativeRefundTo(
+        address claimant,
+        address payable recipient,
+        uint256 deadline,
+        bytes calldata signature
+    ) external nonReentrant {
+        if (recipient == address(0) || block.timestamp > deadline) revert InvalidRecipient();
+        uint256 amount = nativeRefunds[claimant];
+        uint256 nonce = nativeRefundNonces[claimant];
+        bytes32 digest = _hashRefundTypedData(
+            keccak256(abi.encode(NATIVE_REFUND_TYPEHASH, claimant, recipient, amount, nonce, deadline))
+        );
+        if (!_isValidSignature(claimant, digest, signature)) revert InvalidRecipient();
+        nativeRefundNonces[claimant] = nonce + 1;
+        _withdrawNativeRefund(claimant, recipient);
+        emit NativeRefundWithdrawnTo(claimant, recipient, amount);
+    }
+
+    function _withdrawNativeRefund(address claimant, address payable recipient) internal {
+        uint256 amount = nativeRefunds[claimant];
+        nativeRefunds[claimant] = 0;
         totalNativeRefunds -= amount;
-        (bool ok,) = payable(msg.sender).call{ value: amount }("");
+        (bool ok,) = recipient.call{ value: amount }("");
         if (!ok) revert RefundTransferFailed();
-        emit NativeRefundWithdrawn(msg.sender, amount);
+        emit NativeRefundWithdrawn(claimant, amount);
+    }
+
+    function _hashRefundTypedData(bytes32 structHash) internal view returns (bytes32) {
+        bytes32 domainSeparator = keccak256(
+            abi.encode(
+                EIP712_DOMAIN_TYPEHASH,
+                EIP712_NAME_HASH,
+                EIP712_VERSION_HASH,
+                block.chainid,
+                address(this)
+            )
+        );
+        return keccak256(abi.encodePacked("\x19\x01", domainSeparator, structHash));
+    }
+
+    function _isValidSignature(address signer, bytes32 digest, bytes memory signature)
+        internal
+        view
+        returns (bool)
+    {
+        if (signer.code.length != 0) {
+            (bool ok, bytes memory result) = signer.staticcall(
+                abi.encodeWithSignature("isValidSignature(bytes32,bytes)", digest, signature)
+            );
+            return ok && result.length >= 4 && bytes4(result) == ERC1271_MAGICVALUE;
+        }
+        if (signature.length == 65) {
+            bytes32 r;
+            bytes32 s;
+            uint8 v;
+            assembly {
+                r := mload(add(signature, 32))
+                s := mload(add(signature, 64))
+                v := byte(0, mload(add(signature, 96)))
+            }
+            if (v < 27) v += 27;
+            return v == 27 || v == 28 ? ecrecover(digest, v, r, s) == signer : false;
+        }
+        if (signature.length == 64) {
+            bytes32 r;
+            bytes32 vs;
+            assembly {
+                r := mload(add(signature, 32))
+                vs := mload(add(signature, 64))
+            }
+            bytes32 s = vs & bytes32(0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff);
+            uint8 v = uint8(uint256(vs >> 255)) + 27;
+            return ecrecover(digest, v, r, s) == signer;
+        }
+        return false;
     }
 
     function recoverSurplus(address token, address to, uint256 amount) external onlyOwner nonReentrant {
-        if (to == address(0) || IERC20(token).balanceOf(address(this)) < totalTokenRefunds[token] + amount) {
+        if (
+            to == address(0) || protectedRouteTokens[token]
+                || IERC20(token).balanceOf(address(this)) < totalTokenRefunds[token] + amount
+        ) {
             revert InvalidRecoveryAmount();
         }
         IERC20(token).safeTransfer(to, amount);
