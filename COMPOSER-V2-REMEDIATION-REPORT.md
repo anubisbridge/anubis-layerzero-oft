@@ -9,8 +9,8 @@ This remediation addresses the audit findings against `AnubisMultiHopComposer` a
 ## Active deployment
 
 - Contract: `AnubisMultiHopComposerV2`
-- Ethereum address: [`0x3C496D3a94f8D44cdf01dCBcb49863A5eec39840`](https://etherscan.io/address/0x3C496D3a94f8D44cdf01dCBcb49863A5eec39840#code)
-- Deployment transaction: [`0x8c20bde9fe0d2da81c5c0608a25a43645a4805df371d1f6a74d0edfc539d445c`](https://etherscan.io/tx/0x8c20bde9fe0d2da81c5c0608a25a43645a4805df371d1f6a74d0edfc539d445c)
+- Ethereum address: [`0x59DA549d0D3219AcFe3d85435D985BecE9AE374a`](https://etherscan.io/address/0x59DA549d0D3219AcFe3d85435D985BecE9AE374a#code)
+- Deployment transaction: [`0x83eb7f98ad5450b0333df04c06824c38f175ed8f8ea7836cc32c138ed22add10`](https://etherscan.io/tx/0x83eb7f98ad5450b0333df04c06824c38f175ed8f8ea7836cc32c138ed22add10)
 - Endpoint: `0x1a44076050125825900e736c501f859c50fE728c`
 - Owner: `0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a`
 - Etherscan source verification: passed
@@ -75,17 +75,17 @@ The 15 reviewed Ondo Ethereum OFTs return `approvalRequired() == false` and use 
 
 - Active routes copied and read back: 40
 - Active destination allowlist entries copied and read back: 71
-- Route configuration transaction: [`0xaac2634cb36ecc9652bb1f27702f8f9eab7384f108d75799fc3847d51da11438`](https://etherscan.io/tx/0xaac2634cb36ecc9652bb1f27702f8f9eab7384f108d75799fc3847d51da11438)
-- Destination configuration transaction: [`0x5d2a87652859ba1e4967c7198cb5a29f6d7ca38452781dbca3c736f3b153b80c`](https://etherscan.io/tx/0x5d2a87652859ba1e4967c7198cb5a29f6d7ca38452781dbca3c736f3b153b80c)
-- Previous Composer destination-disable transaction: [`0xe83b0fbee17f8cf7b292a17392111eb25e69c7a3fa713652e5cb5e0516ab77db`](https://etherscan.io/tx/0xe83b0fbee17f8cf7b292a17392111eb25e69c7a3fa713652e5cb5e0516ab77db)
-- Previous Composer route-disable transaction: [`0x6ab36d694f634169041475f194e4dc0a3ae90fc55a86a3cfd0b6a16e8f7d118f`](https://etherscan.io/tx/0x6ab36d694f634169041475f194e4dc0a3ae90fc55a86a3cfd0b6a16e8f7d118f)
+- Route configuration transaction: [`0x8ef43799135fbfc15feab27e904ea4c262240cdbd80a9a1ca51d107791388737`](https://etherscan.io/tx/0x8ef43799135fbfc15feab27e904ea4c262240cdbd80a9a1ca51d107791388737)
+- Destination configuration transaction: [`0xccc93a5c0d922a07eb0f09586f057b127f96d836ecbe29469f4dc702caa777aa`](https://etherscan.io/tx/0xccc93a5c0d922a07eb0f09586f057b127f96d836ecbe29469f4dc702caa777aa)
+- Previous Composer destination-disable transaction: [`0x6341aaabb34946ec088aabb9409e80e65cffc46ea6cd88349bd77f54993a5f92`](https://etherscan.io/tx/0x6341aaabb34946ec088aabb9409e80e65cffc46ea6cd88349bd77f54993a5f92)
+- Previous Composer route-disable transaction: [`0xa3df72e420d18614638685fabe50bb13ef1416ee8d904a67e29065471285aa53`](https://etherscan.io/tx/0xa3df72e420d18614638685fabe50bb13ef1416ee8d904a67e29065471285aa53)
 - Active Composer token balances after configuration: zero for every configured underlying
 - Active Composer native balance after configuration: zero
 
 ## Verification and tests
 
 - Solidity compilation: passed with Solidity `0.8.22`, optimizer 200 runs.
-- Project regression suite: 14 tests passed, covering successful hop 2, actual credited amount, dust refund, permanent send failure, zero-fee and one-wei-short permissionless executions, empty-reason retry, disabled and removed routes, standard nested compose, malformed/non-EVM payloads, slippage failure, backed claim fallback and owner surplus isolation.
+- Project regression suite: 15 tests passed, covering successful hop 2, actual credited amount, dust refund, permanent send failure, zero-fee and one-wei-short permissionless executions, empty-reason retry, disabled and removed routes, standard nested compose, malformed/non-EVM payloads, slippage failure, backed claim fallback, alternate recipient authorization and owner surplus isolation.
 - This review repository includes six independently reproducible security regression tests for zero-fee execution, one-wei fee shortfall, empty-reason retry, the OFT-independent route kill switch, zero-address protection and claim backing. Run them with `pnpm test`.
 - Ethereum runtime, owner, Endpoint, configuration read-back and source verification: passed.
 - Mainnet configuration and balance read-back: passed.
