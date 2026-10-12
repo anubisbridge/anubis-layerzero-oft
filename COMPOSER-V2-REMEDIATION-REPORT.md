@@ -96,8 +96,8 @@ The 15 reviewed Ondo Ethereum OFTs return `approvalRequired() == false` and use 
 ## Verification and tests
 
 - Solidity compilation: passed with Solidity `0.8.22`, optimizer 200 runs.
-- Project regression suite: 16 tests passed, covering successful hop 2, actual credited amount, dust refund, permanent send failure, zero-fee and one-wei-short permissionless executions, empty-reason retry, disabled and removed routes, standard nested compose, malformed/non-EVM payloads, non-canonical EVM recipients, slippage failure, backed claim fallback, alternate recipient authorization and owner surplus isolation.
-- This review repository includes six independently reproducible security regression tests for zero-fee execution, one-wei fee shortfall, empty-reason retry, the OFT-independent route kill switch, zero-address protection and claim backing. Run them with `pnpm test`.
+- Private project regression suite: 16 tests passed, covering successful hop 2, actual credited amount, dust refund, permanent send failure, zero-fee and one-wei-short permissionless executions, empty-reason retry, disabled and removed routes, standard nested compose, malformed/non-EVM payloads, non-canonical EVM recipients, slippage failure, backed claim fallback, alternate recipient authorization and owner surplus isolation.
+- This review repository includes 15 independently reproducible regression tests covering the same security properties, including zero-fee execution, one-wei fee shortfall, empty-reason retry, the OFT-independent route kill switch, non-canonical recipient protection and claim backing. Run them with `pnpm test`.
 - Ethereum runtime, owner, Endpoint, configuration read-back and source verification: passed.
 - Mainnet configuration and balance read-back: passed.
 - No production token transfer was sent. The configured test account had no official-mesh token suitable for a closed-loop Composer test; injecting reserves solely for testing was intentionally avoided. A Stargate/LZ-originated micro-transfer should be performed after integration review and before route launch.
