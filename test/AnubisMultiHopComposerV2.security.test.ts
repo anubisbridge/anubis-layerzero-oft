@@ -259,6 +259,7 @@ describe("AnubisMultiHopComposerV2", function () {
       f.token.address,
       f.recipient.address,
       f.owner.address,
+      1000,
       deadline,
       signature
     );

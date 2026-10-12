@@ -1,6 +1,6 @@
 # Anubis LayerZero OFT / Stargate Technical Review
 
-Date: 3 October 2026
+Date: 13 October 2026
 
 Hello LayerZero / Stargate team,
 
@@ -43,7 +43,7 @@ No self-managed BSC, Polygon, Solana, Tron, Avalanche or HyperEVM route is inclu
 | Ethereum | 1 | 30101 | `0x1a44076050125825900e736c501f859c50fE728c` | Canonical lockbox hub |
 | Anubis | 6714 | 30465 | `0x76111de813f83aaadbd62773bf41247634e2319a` | `OFTAlt` destination |
 
-- Ethereum Composer: [`0x59DA549d0D3219AcFe3d85435D985BecE9AE374a`](https://etherscan.io/address/0x59DA549d0D3219AcFe3d85435D985BecE9AE374a#code)
+- Ethereum Composer: [`0x58BEbbB0e17Fef8a740C56Cf50FfAd819488AaDB`](https://etherscan.io/address/0x58BEbbB0e17Fef8a740C56Cf50FfAd819488AaDB#code)
 - Owner and delegate: `0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a`
 - Anubis Endpoint fee token reported at deployment: `0x83fd06F0846d9D90B3016bF670Efe2E0B11cDe14`
 
@@ -87,7 +87,7 @@ No self-managed BSC, Polygon, Solana, Tron, Avalanche or HyperEVM route is inclu
 
 ## Composer configuration
 
-- Composer address: [`0x59DA549d0D3219AcFe3d85435D985BecE9AE374a`](https://etherscan.io/address/0x59DA549d0D3219AcFe3d85435D985BecE9AE374a#code).
+- Composer address: [`0x58BEbbB0e17Fef8a740C56Cf50FfAd819488AaDB`](https://etherscan.io/address/0x58BEbbB0e17Fef8a740C56Cf50FfAd819488AaDB#code).
 - WBTC official Ethereum Adapter: `0x0555e30da8f98308edb960aa94c0db47230d2b9c`; enabled EIDs: BSC `30102`, Avalanche `30106`, Optimism `30111`, Base `30184`, Sei `30280`, Unichain `30320`, Swell `30335`, Berachain `30362` and HyperEVM `30367`.
 - USDT0 official Ethereum OFT/Adapter: `0x6c96de32cea08842dcc4058c14d3aaad7fa41dee`.
 - USDT0 outbound EIDs enabled: Polygon `30109`, Arbitrum `30110`, Optimism `30111`, X Layer `30274`, Sei `30280`, Flare `30295`, Unichain `30320`, Rootstock `30333`, Ink `30339`, Berachain `30362` and HyperEVM `30367`.

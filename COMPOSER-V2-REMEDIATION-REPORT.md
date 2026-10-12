@@ -1,6 +1,6 @@
 # Composer Remediation Report
 
-Date: 3 October 2026
+Date: 13 October 2026
 
 ## Scope
 
@@ -9,8 +9,8 @@ This remediation addresses the audit findings against `AnubisMultiHopComposer` a
 ## Active deployment
 
 - Contract: `AnubisMultiHopComposerV2`
-- Ethereum address: [`0x59DA549d0D3219AcFe3d85435D985BecE9AE374a`](https://etherscan.io/address/0x59DA549d0D3219AcFe3d85435D985BecE9AE374a#code)
-- Deployment transaction: [`0x83eb7f98ad5450b0333df04c06824c38f175ed8f8ea7836cc32c138ed22add10`](https://etherscan.io/tx/0x83eb7f98ad5450b0333df04c06824c38f175ed8f8ea7836cc32c138ed22add10)
+- Ethereum address: [`0x58BEbbB0e17Fef8a740C56Cf50FfAd819488AaDB`](https://etherscan.io/address/0x58BEbbB0e17Fef8a740C56Cf50FfAd819488AaDB#code)
+- Deployment transaction: [`0x4281791b88ff9c0d260bd7a48766af24a03db14c714a1bb58fd88bb4361d8c87`](https://etherscan.io/tx/0x4281791b88ff9c0d260bd7a48766af24a03db14c714a1bb58fd88bb4361d8c87)
 - Endpoint: `0x1a44076050125825900e736c501f859c50fE728c`
 - Owner: `0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a`
 - Etherscan source verification: passed
@@ -34,6 +34,17 @@ This remediation addresses the audit findings against `AnubisMultiHopComposer` a
 - No automatic reverse cross-chain refund is attempted.
 
 The resulting model is: `Retry → local automatic refund on the failure chain → user claim fallback`.
+
+### ANU-02 — Partial refund withdrawal and authorized alternate recipient: remediated
+
+- Refund withdrawal functions now take an explicit amount and support partial withdrawals.
+- Direct claimant withdrawals advance the corresponding nonce, preventing signature replay across the direct and delegated paths.
+- EIP-712 signatures, EOA 64/65-byte signatures, ERC-1271 validation, reentrancy protection and fully backed liability accounting remain enforced.
+- A claimant cannot withdraw more than its recorded token or native refund balance, and no unsigned third-party redirection path is exposed.
+
+### ANU-06 — Canonical EVM recipient validation: remediated
+
+Before quoting or sending hop 2, the Composer validates `nextHop.to` as a canonical EVM address. Zero addresses and `bytes32` values with non-zero upper 96 bits are rejected, preventing silent truncation to an unintended recipient. A regression test covers malformed non-canonical recipients.
 
 ### N-2 — Same-address refund for contract recipients: constrained
 
@@ -75,17 +86,17 @@ The 15 reviewed Ondo Ethereum OFTs return `approvalRequired() == false` and use 
 
 - Active routes copied and read back: 40
 - Active destination allowlist entries copied and read back: 71
-- Route configuration transaction: [`0x8ef43799135fbfc15feab27e904ea4c262240cdbd80a9a1ca51d107791388737`](https://etherscan.io/tx/0x8ef43799135fbfc15feab27e904ea4c262240cdbd80a9a1ca51d107791388737)
-- Destination configuration transaction: [`0xccc93a5c0d922a07eb0f09586f057b127f96d836ecbe29469f4dc702caa777aa`](https://etherscan.io/tx/0xccc93a5c0d922a07eb0f09586f057b127f96d836ecbe29469f4dc702caa777aa)
-- Previous Composer destination-disable transaction: [`0x6341aaabb34946ec088aabb9409e80e65cffc46ea6cd88349bd77f54993a5f92`](https://etherscan.io/tx/0x6341aaabb34946ec088aabb9409e80e65cffc46ea6cd88349bd77f54993a5f92)
-- Previous Composer route-disable transaction: [`0xa3df72e420d18614638685fabe50bb13ef1416ee8d904a67e29065471285aa53`](https://etherscan.io/tx/0xa3df72e420d18614638685fabe50bb13ef1416ee8d904a67e29065471285aa53)
+- Route configuration transaction: [`0x9230344100a5bac83581a90d0dff062d4f948b52529ea3aff028a8ff0c667284`](https://etherscan.io/tx/0x9230344100a5bac83581a90d0dff062d4f948b52529ea3aff028a8ff0c667284)
+- Destination configuration transaction: [`0xb0adbb62b6780fe0dfdca5ab56e1bdc598efa88f3ab59582efdfbc9785f813a2`](https://etherscan.io/tx/0xb0adbb62b6780fe0dfdca5ab56e1bdc598efa88f3ab59582efdfbc9785f813a2)
+- Previous Composer destination-disable transaction: [`0xc062d52967efbd076da716205bb14fabf9094fe3cf08074ddf3fda17956031af`](https://etherscan.io/tx/0xc062d52967efbd076da716205bb14fabf9094fe3cf08074ddf3fda17956031af)
+- Previous Composer route-disable transaction: [`0x7e5b1d24274e65b2db4f7e31743f18e1c9563d1a17eff0a6df4965582167e8b7`](https://etherscan.io/tx/0x7e5b1d24274e65b2db4f7e31743f18e1c9563d1a17eff0a6df4965582167e8b7)
 - Active Composer token balances after configuration: zero for every configured underlying
 - Active Composer native balance after configuration: zero
 
 ## Verification and tests
 
 - Solidity compilation: passed with Solidity `0.8.22`, optimizer 200 runs.
-- Project regression suite: 15 tests passed, covering successful hop 2, actual credited amount, dust refund, permanent send failure, zero-fee and one-wei-short permissionless executions, empty-reason retry, disabled and removed routes, standard nested compose, malformed/non-EVM payloads, slippage failure, backed claim fallback, alternate recipient authorization and owner surplus isolation.
+- Project regression suite: 16 tests passed, covering successful hop 2, actual credited amount, dust refund, permanent send failure, zero-fee and one-wei-short permissionless executions, empty-reason retry, disabled and removed routes, standard nested compose, malformed/non-EVM payloads, non-canonical EVM recipients, slippage failure, backed claim fallback, alternate recipient authorization and owner surplus isolation.
 - This review repository includes six independently reproducible security regression tests for zero-fee execution, one-wei fee shortfall, empty-reason retry, the OFT-independent route kill switch, zero-address protection and claim backing. Run them with `pnpm test`.
 - Ethereum runtime, owner, Endpoint, configuration read-back and source verification: passed.
 - Mainnet configuration and balance read-back: passed.

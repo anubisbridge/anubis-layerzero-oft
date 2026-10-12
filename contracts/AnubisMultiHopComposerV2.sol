@@ -127,6 +127,7 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
     error InvalidRecoveryAmount();
     error RetryableSecondHopFailure();
     error RefundNotBacked(address token, uint256 balance, uint256 required);
+    error InvalidRefundAmount();
 
     constructor(address endpoint_, address owner_) Ownable(owner_) {
         if (endpoint_ == address(0) || owner_ == address(0)) revert InvalidRouteConfiguration();
@@ -336,7 +337,11 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
         if (!allowedDestinations[nextOft][nextHop.dstEid]) {
             return abi.encodeWithSelector(DestinationNotAllowed.selector, nextOft, nextHop.dstEid);
         }
-        if (nextHop.to == bytes32(0)) return abi.encodeWithSelector(InvalidRecipient.selector);
+        // OFT encodes the recipient as bytes32 but EVM destinations consume the
+        // lower 160 bits. Reject upper-bit values before quoting or sending.
+        if (_validEvmAddress(nextHop.to) == address(0)) {
+            return abi.encodeWithSelector(InvalidRecipient.selector);
+        }
         SendParam memory quotedParam = nextHop;
         quotedParam.amountLD = receivedAmount;
         try IOFT(nextOft).quoteOFT(quotedParam) returns (OFTLimit memory, OFTFeeDetail[] memory, OFTReceipt memory receipt) {
@@ -425,7 +430,10 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
     }
 
     function withdrawTokenRefund(address token) external nonReentrant {
-        _withdrawTokenRefund(token, msg.sender, msg.sender);
+        uint256 amount = tokenRefunds[token][msg.sender];
+        if (amount == 0) revert InvalidRefundAmount();
+        tokenRefundNonces[msg.sender] += 1;
+        _withdrawTokenRefund(token, msg.sender, msg.sender, amount);
     }
 
     /// @notice Withdraw a token refund to an alternate recipient authorized by the claimant.
@@ -434,31 +442,37 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
         address token,
         address claimant,
         address recipient,
+        uint256 amount,
         uint256 deadline,
         bytes calldata signature
     ) external nonReentrant {
-        if (recipient == address(0) || block.timestamp > deadline) revert InvalidRecipient();
-        uint256 amount = tokenRefunds[token][claimant];
+        if (
+            recipient == address(0) || block.timestamp > deadline
+                || amount == 0 || amount > tokenRefunds[token][claimant]
+        ) revert InvalidRefundAmount();
         uint256 nonce = tokenRefundNonces[claimant];
         bytes32 digest = _hashRefundTypedData(
             keccak256(abi.encode(TOKEN_REFUND_TYPEHASH, token, claimant, recipient, amount, nonce, deadline))
         );
         if (!_isValidSignature(claimant, digest, signature)) revert InvalidRecipient();
         tokenRefundNonces[claimant] = nonce + 1;
-        _withdrawTokenRefund(token, claimant, recipient);
+        _withdrawTokenRefund(token, claimant, recipient, amount);
         emit TokenRefundWithdrawnTo(token, claimant, recipient, amount);
     }
 
-    function _withdrawTokenRefund(address token, address claimant, address recipient) internal {
-        uint256 amount = tokenRefunds[token][claimant];
-        tokenRefunds[token][claimant] = 0;
+    function _withdrawTokenRefund(address token, address claimant, address recipient, uint256 amount) internal {
+        if (amount == 0 || amount > tokenRefunds[token][claimant]) revert InvalidRefundAmount();
+        tokenRefunds[token][claimant] -= amount;
         totalTokenRefunds[token] -= amount;
         IERC20(token).safeTransfer(recipient, amount);
         emit TokenRefundWithdrawn(token, claimant, amount);
     }
 
     function withdrawNativeRefund() external nonReentrant {
-        _withdrawNativeRefund(msg.sender, payable(msg.sender));
+        uint256 amount = nativeRefunds[msg.sender];
+        if (amount == 0) revert InvalidRefundAmount();
+        nativeRefundNonces[msg.sender] += 1;
+        _withdrawNativeRefund(msg.sender, payable(msg.sender), amount);
     }
 
     /// @notice Withdraw a native refund to an alternate recipient authorized by the claimant.
@@ -466,24 +480,27 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
     function withdrawNativeRefundTo(
         address claimant,
         address payable recipient,
+        uint256 amount,
         uint256 deadline,
         bytes calldata signature
     ) external nonReentrant {
-        if (recipient == address(0) || block.timestamp > deadline) revert InvalidRecipient();
-        uint256 amount = nativeRefunds[claimant];
+        if (
+            recipient == address(0) || block.timestamp > deadline
+                || amount == 0 || amount > nativeRefunds[claimant]
+        ) revert InvalidRefundAmount();
         uint256 nonce = nativeRefundNonces[claimant];
         bytes32 digest = _hashRefundTypedData(
             keccak256(abi.encode(NATIVE_REFUND_TYPEHASH, claimant, recipient, amount, nonce, deadline))
         );
         if (!_isValidSignature(claimant, digest, signature)) revert InvalidRecipient();
         nativeRefundNonces[claimant] = nonce + 1;
-        _withdrawNativeRefund(claimant, recipient);
+        _withdrawNativeRefund(claimant, recipient, amount);
         emit NativeRefundWithdrawnTo(claimant, recipient, amount);
     }
 
-    function _withdrawNativeRefund(address claimant, address payable recipient) internal {
-        uint256 amount = nativeRefunds[claimant];
-        nativeRefunds[claimant] = 0;
+    function _withdrawNativeRefund(address claimant, address payable recipient, uint256 amount) internal {
+        if (amount == 0 || amount > nativeRefunds[claimant]) revert InvalidRefundAmount();
+        nativeRefunds[claimant] -= amount;
         totalNativeRefunds -= amount;
         (bool ok,) = recipient.call{ value: amount }("");
         if (!ok) revert RefundTransferFailed();
