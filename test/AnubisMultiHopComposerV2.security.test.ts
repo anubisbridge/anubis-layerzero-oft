@@ -267,6 +267,59 @@ describe("AnubisMultiHopComposerV2", function () {
     expect((await f.composer.totalTokenRefunds(f.token.address)).toString()).to.equal("0");
   });
 
+  async function contractRefundFixture() {
+    const f = await fixture();
+    const Wallet = await ethers.getContractFactory("MockERC1271Wallet");
+    const wallet = await Wallet.deploy();
+    await f.token.setBlocked(wallet.address, true);
+    await f.next.setFailSend(true);
+    await f.token.mint(f.composer.address, 1000);
+    const msg = await message(wallet.address, 1000, sendParam(wallet.address));
+    await f.endpoint.compose(f.composer.address, f.source.address, ethers.constants.HashZero, msg, {
+      value: await f.next.nativeFee(),
+    });
+    return { ...f, wallet };
+  }
+
+  async function contractRefundDeadline(f: any) {
+    return (await ethers.provider.getBlock("latest")).timestamp + 3600;
+  }
+
+  it("accepts only a complete ABI-encoded ERC-1271 magic value", async () => {
+    const f = await contractRefundFixture();
+    await f.wallet.setReturnData(ethers.utils.defaultAbiCoder.encode(["bytes4"], ["0x1626ba7e"]));
+    const deadline = await contractRefundDeadline(f);
+    await f.composer.withdrawTokenRefundTo(f.token.address, f.wallet.address, f.owner.address, 1000, deadline, "0x");
+    expect((await f.token.balanceOf(f.owner.address)).toString()).to.equal("1000");
+  });
+
+  for (const [name, returnData] of [
+    ["truncated 4-byte", "0x1626ba7e"],
+    ["magic prefix with trailing data", "0x1626ba7e00"],
+    ["overlong ABI data", "0x" + "1626ba7e" + "00".repeat(60)],
+    ["wrong magic", ethers.utils.defaultAbiCoder.encode(["bytes4"], ["0xffffffff"])],
+  ] as const) {
+    it(`rejects ERC-1271 ${name} return data`, async () => {
+      const f = await contractRefundFixture();
+      await f.wallet.setReturnData(returnData);
+      const deadline = await contractRefundDeadline(f);
+      await expectRevert(
+        f.composer.withdrawTokenRefundTo(f.token.address, f.wallet.address, f.owner.address, 1000, deadline, "0x")
+      );
+      expect((await f.composer.tokenRefundNonces(f.wallet.address)).toString()).to.equal("0");
+    });
+  }
+
+  it("rejects a reverting ERC-1271 wallet", async () => {
+    const f = await contractRefundFixture();
+    await f.wallet.setShouldRevert(true);
+    const deadline = await contractRefundDeadline(f);
+    await expectRevert(
+      f.composer.withdrawTokenRefundTo(f.token.address, f.wallet.address, f.owner.address, 1000, deadline, "0x")
+    );
+    expect((await f.composer.tokenRefundNonces(f.wallet.address)).toString()).to.equal("0");
+  });
+
   it("uses a native refund ledger when a receiver rejects ETH", async () => {
     const f = await fixture();
     const Reject = await ethers.getContractFactory("RejectNativeRefund");

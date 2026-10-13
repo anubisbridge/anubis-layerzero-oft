@@ -529,7 +529,10 @@ contract AnubisMultiHopComposerV2 is ILayerZeroComposer, Ownable, ReentrancyGuar
             (bool ok, bytes memory result) = signer.staticcall(
                 abi.encodeWithSignature("isValidSignature(bytes32,bytes)", digest, signature)
             );
-            return ok && result.length >= 4 && bytes4(result) == ERC1271_MAGICVALUE;
+            // ERC-1271 returns a bytes4 value ABI-encoded in one complete 32-byte word.
+            // Reject truncated or overlong return data so malformed wallets cannot be
+            // treated as valid signers.
+            return ok && result.length == 32 && abi.decode(result, (bytes4)) == ERC1271_MAGICVALUE;
         }
         if (signature.length == 65) {
             bytes32 r;

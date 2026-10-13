@@ -84,3 +84,26 @@ contract MockComposerEndpoint {
 }
 
 contract RejectNativeRefund { receive() external payable { revert("no native"); } }
+
+/// @dev Test-only ERC-1271 wallet that can return arbitrary raw bytes.
+contract MockERC1271Wallet {
+    bytes public returnData;
+    bool public shouldRevert;
+    bool public rejectNative;
+
+    function setReturnData(bytes calldata value) external { returnData = value; }
+    function setShouldRevert(bool value) external { shouldRevert = value; }
+    function setRejectNative(bool value) external { rejectNative = value; }
+
+    receive() external payable {
+        if (rejectNative) revert("native rejected");
+    }
+
+    fallback() external {
+        if (shouldRevert) revert("invalid signature");
+        bytes memory data = returnData;
+        assembly {
+            return(add(data, 32), mload(data))
+        }
+    }
+}

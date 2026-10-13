@@ -1,6 +1,6 @@
 # Composer Remediation Report
 
-Date: 13 October 2026
+Date: 14 October 2026
 
 ## Scope
 
@@ -9,8 +9,8 @@ This remediation addresses the audit findings against `AnubisMultiHopComposer` a
 ## Active deployment
 
 - Contract: `AnubisMultiHopComposerV2`
-- Ethereum address: [`0x58BEbbB0e17Fef8a740C56Cf50FfAd819488AaDB`](https://etherscan.io/address/0x58BEbbB0e17Fef8a740C56Cf50FfAd819488AaDB#code)
-- Deployment transaction: [`0x4281791b88ff9c0d260bd7a48766af24a03db14c714a1bb58fd88bb4361d8c87`](https://etherscan.io/tx/0x4281791b88ff9c0d260bd7a48766af24a03db14c714a1bb58fd88bb4361d8c87)
+- Ethereum address: [`0xEBB1998d94fe21889A28c65226556bBaac843172`](https://etherscan.io/address/0xEBB1998d94fe21889A28c65226556bBaac843172#code)
+- Deployment transaction: [`0x82f7a46afcdb5287ee3e91757025307517441260f896afef95bd67e3327527aa`](https://etherscan.io/tx/0x82f7a46afcdb5287ee3e91757025307517441260f896afef95bd67e3327527aa)
 - Endpoint: `0x1a44076050125825900e736c501f859c50fE728c`
 - Owner: `0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a`
 - Etherscan source verification: passed
@@ -41,6 +41,14 @@ The resulting model is: `Retry → local automatic refund on the failure chain �
 - Direct claimant withdrawals advance the corresponding nonce, preventing signature replay across the direct and delegated paths.
 - EIP-712 signatures, EOA 64/65-byte signatures, ERC-1271 validation, reentrancy protection and fully backed liability accounting remain enforced.
 - A claimant cannot withdraw more than its recorded token or native refund balance, and no unsigned third-party redirection path is exposed.
+
+### ANU-07 — Strict ERC-1271 return-data validation: remediated
+
+- The Composer now requires a successful ERC-1271 call with exactly 32 bytes of ABI-encoded return data.
+- Only `bytes4(0x1626ba7e)` is accepted; truncated, overlong, wrong-magic, and reverting responses are rejected.
+- The check applies to both token and native alternate-recipient refund claims.
+- Regression coverage includes canonical, truncated, trailing-data, overlong, wrong-magic and reverting contract-wallet responses.
+- The focused self-audit passed 23 Composer tests before deployment. This is project verification and does not replace CertiK re-review.
 
 ### ANU-06 — Canonical EVM recipient validation: remediated
 
@@ -86,18 +94,18 @@ The 15 reviewed Ondo Ethereum OFTs return `approvalRequired() == false` and use 
 
 - Active routes copied and read back: 40
 - Active destination allowlist entries copied and read back: 71
-- Route configuration transaction: [`0x9230344100a5bac83581a90d0dff062d4f948b52529ea3aff028a8ff0c667284`](https://etherscan.io/tx/0x9230344100a5bac83581a90d0dff062d4f948b52529ea3aff028a8ff0c667284)
-- Destination configuration transaction: [`0xb0adbb62b6780fe0dfdca5ab56e1bdc598efa88f3ab59582efdfbc9785f813a2`](https://etherscan.io/tx/0xb0adbb62b6780fe0dfdca5ab56e1bdc598efa88f3ab59582efdfbc9785f813a2)
-- Previous Composer destination-disable transaction: [`0xc062d52967efbd076da716205bb14fabf9094fe3cf08074ddf3fda17956031af`](https://etherscan.io/tx/0xc062d52967efbd076da716205bb14fabf9094fe3cf08074ddf3fda17956031af)
-- Previous Composer route-disable transaction: [`0x7e5b1d24274e65b2db4f7e31743f18e1c9563d1a17eff0a6df4965582167e8b7`](https://etherscan.io/tx/0x7e5b1d24274e65b2db4f7e31743f18e1c9563d1a17eff0a6df4965582167e8b7)
+- Route configuration transaction: [`0x092b37e55a84501e5b81d3f672f3988535b50c4c12933284dbbba6b1ca015317`](https://etherscan.io/tx/0x092b37e55a84501e5b81d3f672f3988535b50c4c12933284dbbba6b1ca015317)
+- Destination configuration transaction: [`0xb821adec81b06646601eab8909f35ab767583df9ae501a48b3bd443a5d353639`](https://etherscan.io/tx/0xb821adec81b06646601eab8909f35ab767583df9ae501a48b3bd443a5d353639)
+- Previous Composer destination-disable transaction: [`0xace4c654d60bf820e6fcea7a3fa7c8d250f06a5b5a7da84b02ca89a364d03d95`](https://etherscan.io/tx/0xace4c654d60bf820e6fcea7a3fa7c8d250f06a5b5a7da84b02ca89a364d03d95)
+- Previous Composer route-disable transaction: [`0xd13169b1df050350b5d7d20339fc105199d7f42cb79917dcc499ee4501b6c604`](https://etherscan.io/tx/0xd13169b1df050350b5d7d20339fc105199d7f42cb79917dcc499ee4501b6c604)
 - Active Composer token balances after configuration: zero for every configured underlying
 - Active Composer native balance after configuration: zero
 
 ## Verification and tests
 
 - Solidity compilation: passed with Solidity `0.8.22`, optimizer 200 runs.
-- Private project regression suite: 16 tests passed, covering successful hop 2, actual credited amount, dust refund, permanent send failure, zero-fee and one-wei-short permissionless executions, empty-reason retry, disabled and removed routes, standard nested compose, malformed/non-EVM payloads, non-canonical EVM recipients, slippage failure, backed claim fallback, alternate recipient authorization and owner surplus isolation.
-- This review repository includes 15 independently reproducible regression tests covering the same security properties, including zero-fee execution, one-wei fee shortfall, empty-reason retry, the OFT-independent route kill switch, non-canonical recipient protection and claim backing. Run them with `pnpm test`.
+- Private project regression suite: 23 tests passed, covering successful hop 2, actual credited amount, dust refund, permanent send failure, zero-fee and one-wei-short permissionless executions, empty-reason retry, disabled and removed routes, standard nested compose, malformed/non-EVM payloads, non-canonical EVM recipients, slippage failure, backed claim fallback, alternate recipient authorization, strict ERC-1271 responses and owner surplus isolation.
+- This review repository includes 21 independently reproducible regression tests covering the same security properties, including canonical and malformed ERC-1271 responses. Run them with `pnpm test`.
 - Ethereum runtime, owner, Endpoint, configuration read-back and source verification: passed.
 - Mainnet configuration and balance read-back: passed.
 - No production token transfer was sent. The configured test account had no official-mesh token suitable for a closed-loop Composer test; injecting reserves solely for testing was intentionally avoided. A Stargate/LZ-originated micro-transfer should be performed after integration review and before route launch.
