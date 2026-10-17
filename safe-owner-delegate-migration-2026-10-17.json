@@ -1,0 +1,2142 @@
+{
+  "startedAt": "2026-10-17T12:33:43.456Z",
+  "signer": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+  "safes": {
+    "ethereum": "0x8893335CB1d4638020c66A88C08726373F119169",
+    "anubis": "0xC78E137279E245E8Da0C09C60F56bB695cb35358"
+  },
+  "scope": {
+    "ethereumOApps": 28,
+    "anubisOApps": 28,
+    "ethereumComposer": 1
+  },
+  "delegateTransactions": [
+    {
+      "network": "ethereum",
+      "rel": "ethereum-usdc-adapter.json",
+      "address": "0xcDDF41841f6e0D2611f8f4326f872C0490Cb50d1",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x54d2a3fbae5a662d8a5a3e12e8ae098d80242db5aa742444884d08b2898b0bb4",
+        "blockNumber": 26212303,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-dai-adapter.json",
+      "address": "0x2E20D21CD928d662aE52eF86690043f93F14faF0",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x305c8e0f83de370d9405122ef67c46f0c638153fdbe72a2da751d04a5e7f09ae",
+        "blockNumber": 26212304,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "wbtc8-ethereum-adapter.json",
+      "address": "0x713441E6e7865ad91C3A89620dff1CdAd49900A6",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x332cd9b90cfc1859c67db09cc022f8b2b58006be87c2c8e3ffa106a168536d1e",
+        "blockNumber": 26212305,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/usd1-ethereum-adapter.json",
+      "address": "0x7298E75dbAF188BaA2e528188cf253C97D85B60b",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xb4c533d9c7268a88d06eea13caad709f1a90a337d4c41efbd1acadf995be237a",
+        "blockNumber": 26212306,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/paxg-ethereum-adapter.json",
+      "address": "0xE44ba3562BE254045591748481789496d8B12815",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xd7ec2f6a3f6bbb297523a15f4fe123ac6070978698e0b447674305862cc54b5f",
+        "blockNumber": 26212307,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/xaut-ethereum-adapter.json",
+      "address": "0x1f033d91919FF79BB0FA66fcb378549F6746f03D",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x21e13416254b5ea7fed3c07cc9121a7772ebad29adcaf008f80c4b23e68baca9",
+        "blockNumber": 26212308,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/usde-ethereum-adapter.json",
+      "address": "0xB93e47A4901ADcCcEae4CF7ac4cc74613aBB4cf3",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x2ce415c3ca97f949fdeaf3a40de2f8d3e148d8a389b253dd5a64d704eeede687",
+        "blockNumber": 26212309,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/usds-ethereum-adapter.json",
+      "address": "0xC05Bf3348f2cf1b6Ec127C601D0978eC59cD6F8e",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x8aeb639e0f32a33ad9e58b3dbf7b963a967fd1c81ac179776d3edd70d2d8aba8",
+        "blockNumber": 26212310,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/link-ethereum-adapter.json",
+      "address": "0x093A44369a75aFBC245680EB5B296bab9983557b",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xa69f8fc4cd5990cfbb20983ecc76e5135145477a139b06032a1818c8b1819b64",
+        "blockNumber": 26212311,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/uni-ethereum-adapter.json",
+      "address": "0xF01CFBc960A910D58dc01E5D0a57c97eCf2E5302",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x5fc34f785a455dd395afd640a6a1c8b69516b0cf2c9a0a4f8bc7921a632c940c",
+        "blockNumber": 26212313,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/sky-ethereum-adapter.json",
+      "address": "0x6e1cB391C5d3Ce8aCfa8b54E89a43166a33d39C1",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x3cd46fff19fe60c3c2baaf79cb358eafcaf6bc1c2a47dcdc2601385ca8a3db27",
+        "blockNumber": 26212314,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/aapl-ethereum-adapter.json",
+      "address": "0xbf09E3FA640dfc83C81543BC2dA7A7Ec2FA30767",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x3663375ffcf44608d1a75244dd778f502d0037b3107c77ccf2693539f2f81db6",
+        "blockNumber": 26212315,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/amd-ethereum-adapter.json",
+      "address": "0x52386039CBC6C80B0c8B70ea9901393824e44E5e",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x2fd57bd39af3a348f7fba05999d38cf4a08a9255ed8742ada634df3fe5ad58eb",
+        "blockNumber": 26212316,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/crcl-ethereum-adapter.json",
+      "address": "0x632B01694fFadbC04b025845Ad555b1F10D64340",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x8ce43c6b6c95fe7d87864ce175cedd12d3615d8561f288185875b36259bbc02c",
+        "blockNumber": 26212317,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/gme-ethereum-adapter.json",
+      "address": "0x871BC70C0d14015754909d71e51331454C56120d",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x03210a9eaeb223a68b7f0e4bc292a91d128249d42431a6b9b3def34f8d59f272",
+        "blockNumber": 26212318,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/googl-ethereum-adapter.json",
+      "address": "0x301eC97e7620339A5cC955DA8f2271F613F5ba50",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xdc985b510705d2b8a54d7833172db8477727199ae75db1e77a0667a772685e52",
+        "blockNumber": 26212319,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/intc-ethereum-adapter.json",
+      "address": "0xbFABbe98303B78159C15dE8CdA6c04f2213e72D1",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xaa070af12cb0a87aed50f91bddd80e4e7bdc2c0bdf650b1be413a7fa1acd0f6e",
+        "blockNumber": 26212320,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/mrna-ethereum-adapter.json",
+      "address": "0xEB8C79CA79913974cB44686133ea3e451AA17ae2",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x9f4b46d5bc7e13a7c67788bbb46827242df277119bec999a1be8b2b2a111c8a4",
+        "blockNumber": 26212321,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/msft-ethereum-adapter.json",
+      "address": "0x78E535dD90C11a30dBadFBCb9621648236756Ca4",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xbdc8a95adbb94ed2a9eba1023a37dabfe30d6704721053aa76fc4fd4e78c4a06",
+        "blockNumber": 26212322,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/mstr-ethereum-adapter.json",
+      "address": "0x76B2813Ba6Bb0e1cF33908ef7C7876a2F7B457B0",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x0f2b47c6fc0b18919a597512c97055da2b6485a528c71f1cd40d074bd907e11d",
+        "blockNumber": 26212324,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/mu-ethereum-adapter.json",
+      "address": "0x57F2Bc7947AF0146c768c0C150FAA6E04776f93E",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x0cd8cdf37b4538d7e77d83079e083beed0d24faa99dce57749b1a9b6eb011449",
+        "blockNumber": 26212325,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/nflx-ethereum-adapter.json",
+      "address": "0x05fDe3a3CC3b77AEb39504DB812A8aa83b4C3f4d",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x32950ba15eeccd2db3eaea827b775cbf0d0c84cd4631431805c95e35e9efc652",
+        "blockNumber": 26212326,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/nvda-ethereum-adapter.json",
+      "address": "0x25df0345D524c982d68f99187AB79CFC9FDEF225",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x6b8b21d1d5b508b33920121823a781497e1ae845f7b287a87a0029c41d13e5d1",
+        "blockNumber": 26212327,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/sndk-ethereum-adapter.json",
+      "address": "0x00E31E70F1d2Ee4bB06c237bcd366417106DcCfb",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xa70c71a925a649454fbeaffdbd3937fb269f73f3112035c99bff7e066de5c3d5",
+        "blockNumber": 26212328,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/spcx-ethereum-adapter.json",
+      "address": "0x88B931ad2F1d9809f786E396c467b031876ef9BB",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x96615eb5313332fc12e21b0f8e87f773d4b2727b1618cd95a0818f1656c9cee4",
+        "blockNumber": 26212329,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/tsla-ethereum-adapter.json",
+      "address": "0x262d46113849EF2948845a9f10ee109164469c98",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x71e52aa1f011ec3ac398e0174ede5687abc806a51230a804b3b9469ab7d42db4",
+        "blockNumber": 26212331,
+        "gasUsed": "33739",
+        "gasLimit": "62735"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usdt-anubis-alt-oft.json",
+      "address": "0xA0bD8B3d33718F623C5C1F1551B5B069f6a4F127",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x327b4e4dcbe1e8c2b7cc247b785ef4d8da109c6c0ca997afc2ac4925085fcf78",
+        "blockNumber": 16710757,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usdc-anubis-alt-oft.json",
+      "address": "0x283B21431130544D8DE08756313EF06A38a2a81e",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xbad420537d69532f27aa9d27db78a708d9cacbdeff04c60e7ba8e0bb3d81f696",
+        "blockNumber": 16710762,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/dai-anubis-alt-oft.json",
+      "address": "0x9aB7638f85eCfb449Cef84d11e2Da69694B3b792",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x874926c1e14707b786e36485a2b7b06c29b20ebf052be01b126b935e1a1ba16c",
+        "blockNumber": 16710768,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/wbtc-anubis-alt-oft.json",
+      "address": "0x5133b6Ff1F013cf1CE82ff8430fCdd57a16ab6ef",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x9f96fdab0047d452e53e828bad4913900673c252924ae6ef574eea5b6698c6ef",
+        "blockNumber": 16710773,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/eth-anubis-alt-oft.json",
+      "address": "0xf0Cf5B49E8cd02573EC2F76Ab3b357A7Eab7bE3d",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x3c16fc2452a10322dddf80266c5817f7ed4e8bcc918db1aeaedd3b6629d3d6d0",
+        "blockNumber": 16710779,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usd1-anubis-alt-oft.json",
+      "address": "0x820d2B28c34f87195ab32055c054Ce84d43d1360",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x25ad60df062b95053098316b881467c35e02d8e462063a1d8d75e2b67fd97e01",
+        "blockNumber": 16710785,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/paxg-anubis-alt-oft.json",
+      "address": "0x7A0B1fA85d1E89116256D5250d4c368D752c3e79",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x42ab3c8372799d872c409e23ac78e550692f2058a97dbd11dc94560ae999e2e5",
+        "blockNumber": 16710791,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/xaut-anubis-alt-oft.json",
+      "address": "0xdDfEAA69B9351156BE245915C3f1ce45Ac7c0544",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x951bc9e52c7941320bbae8b81901fce156035da4d218a11cc8c26eac22aba5ed",
+        "blockNumber": 16710796,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usde-anubis-alt-oft.json",
+      "address": "0x6F0cA9A07690905CfbfC6c75ac8F69fCea4ebD38",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xef5cfe795504e4d4a1670ef5e59dfa53f36d4c81737421499375bf90d68c5a94",
+        "blockNumber": 16710802,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usds-anubis-alt-oft.json",
+      "address": "0xA6DB5061A613176aB8F8ae868BF22C1c3dD88363",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x6238be8d942078421ce8065ac4adf9076e78c365994c845af51343242127de43",
+        "blockNumber": 16710808,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/link-anubis-alt-oft.json",
+      "address": "0x5c79e306FBEE477F0F727138080d0EAb0f7556A4",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xe61c840568be41a9c9fa94564b36c75d186179f83e9c0324b00c8c7705c04e7c",
+        "blockNumber": 16710813,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/uni-anubis-alt-oft.json",
+      "address": "0x75112Cb111A2b51de4846cD0183545f28F6e3E16",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x3e8f31a3d82e6f88a41ba5fc55be007411ff50b7df7ea3b9ed39d2f36679d390",
+        "blockNumber": 16710819,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/sky-anubis-alt-oft.json",
+      "address": "0x1fF6Ea9AbBa7C7d9F524962A5d32899cda47655e",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xee7b2496220a7cdb01ab4276979e62cb3137dbcfbe01579d37e1ccb76a993a0e",
+        "blockNumber": 16710824,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/aapl-anubis-alt-oft.json",
+      "address": "0xc6D0778718d40f31422e60F25299A04878E8d9c2",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xf42de2ba09f5a2dffc16f5eb6e07f1ab141d78044a2a5e35154b4ca41a8fad15",
+        "blockNumber": 16710830,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/amd-anubis-alt-oft.json",
+      "address": "0x7c2Ff3733683817b66834B29562A6AF4A70eF7F9",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x856a996251212e35e1a4b86b46f5bbc5b421d895ebb454390eeacab4c5228288",
+        "blockNumber": 16710835,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/crcl-anubis-alt-oft.json",
+      "address": "0xD578D5f983DA24F27F5506fA5285eE54778AC8FF",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x7190babf2be1424e1552471297e717bc47620a6f2f10bfc27b77908032109f54",
+        "blockNumber": 16710841,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/gme-anubis-alt-oft.json",
+      "address": "0x033815B275eDA321BcCFa5487728CBc7f87bEb20",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x558db4ecfe76ad7f2e986c450d7460a9540d3cd5a5b24b5e2527b2d4aa63328c",
+        "blockNumber": 16710846,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/googl-anubis-alt-oft.json",
+      "address": "0xa37e25C021851F49A14F3490BE2C410b8A2226f8",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xc38a224f7dcd4bd6177ec9bb992b86b1d716ade831294499ecd257efc7694c5f",
+        "blockNumber": 16710852,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/intc-anubis-alt-oft.json",
+      "address": "0x7c29CE7AaA51C3Cc671805449a79078d926babc3",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x487a91165adbd5264da095c3d3d5a40f00f2dec42005311d8d66f4327642941c",
+        "blockNumber": 16710857,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/mrna-anubis-alt-oft.json",
+      "address": "0x551F93186CC1a123481b7BBC11D056a899d7B9e1",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x4650b0938cbc6c5e819ff06168fd1e5f9a7c6446aefd4cb1ddfd48aa66b87aea",
+        "blockNumber": 16710863,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/msft-anubis-alt-oft.json",
+      "address": "0xc8fA84483EEbF11f2A7F61ACc0417e84e7043845",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xd22e40c1ba4ad23b74b10b0ded16efff2e024544c6fe9efbef25db5349e83178",
+        "blockNumber": 16710868,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/mstr-anubis-alt-oft.json",
+      "address": "0x0dFD1c436ddCAfe468eEa8d67e47a5BB315f389c",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x89cce3bd54c941b006d228fe90d7a136691893af470b6141faa5999ebdc93cf4",
+        "blockNumber": 16710874,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/mu-anubis-alt-oft.json",
+      "address": "0x567c7f4587532FF4645D46c2546e80ADE6782B12",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xacdc0b43678f745500fa7d13497c8791e39d5d033381746db9085ae01de9a4a6",
+        "blockNumber": 16710880,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/nflx-anubis-alt-oft.json",
+      "address": "0xA77609896bb3D6D4dB05D06C957CB0C611f58f31",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x271f6ca33bc381b379d05bd1738b43be0c84ec9172d2d3a004c92d344a634d54",
+        "blockNumber": 16710885,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/nvda-anubis-alt-oft.json",
+      "address": "0xcc1b7bc3dDEC73986C63E878C7C81e614d030A5d",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x7bf6d0c8aa34488de2d16aad0b24366024f1ca8f5b1133f436f052f363b1a402",
+        "blockNumber": 16710891,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/sndk-anubis-alt-oft.json",
+      "address": "0x51dbea18a37b503C1207b6B6cEB678182f72a91e",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x181bd42d0c0dd5e73431a5006da2f095e281a0a0451b6d177e9d3d5c47ae0580",
+        "blockNumber": 16710896,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/spcx-anubis-alt-oft.json",
+      "address": "0x4AB3Dab17a8607F874Cd9987ee57Fc972BEe8D04",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x9132f9fa01082bdd572493ec68a58d6d9605b3e84f8cd6c3849bb6cd56df49e6",
+        "blockNumber": 16710903,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/tsla-anubis-alt-oft.json",
+      "address": "0x2700fdFfBBC8bE673e80B7faF8a302F5B5196C90",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xb09da7a72787f60cccb0d4d063e12a986f5008b1ee70daa673e94657efe44d92",
+        "blockNumber": 16710907,
+        "gasUsed": "33728",
+        "gasLimit": "62720"
+      }
+    }
+  ],
+  "ownerTransactions": [
+    {
+      "network": "ethereum",
+      "rel": "ethereum-eth-native-adapter.json",
+      "address": "0x99c880f03055351A17bDa275E7C165fdeFF89fA5",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xddfba833ea28e2ff6c1054572ad5d16bf17e6ce955fac85271b089086664c147",
+        "blockNumber": 26212346,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-usdt-adapter.json",
+      "address": "0xC2e75F4dB642Cf1b8b5ca9A1DC0450DaE9505352",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x754efff8c7ca0c76cd3c0ab1682cd5693f826ea273ab95d3d25446f029f30ab1",
+        "blockNumber": 26212347,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-usdc-adapter.json",
+      "address": "0xcDDF41841f6e0D2611f8f4326f872C0490Cb50d1",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x41f1613f4db2368d5e924923cdb6baf767353bb17c3dc59d4f50be26cd1f07c1",
+        "blockNumber": 26212348,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-dai-adapter.json",
+      "address": "0x2E20D21CD928d662aE52eF86690043f93F14faF0",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x8152135f5c22cd54e353f36785ae37657ca9cbaabe5203e530d2d143eb29f265",
+        "blockNumber": 26212349,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "wbtc8-ethereum-adapter.json",
+      "address": "0x713441E6e7865ad91C3A89620dff1CdAd49900A6",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xc062194a3b5c75eca98e89bcf661ded0bec5c5190ccd19552709238fb299c50c",
+        "blockNumber": 26212350,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/usd1-ethereum-adapter.json",
+      "address": "0x7298E75dbAF188BaA2e528188cf253C97D85B60b",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xe9005051b99730b019acb4ff24960cf3eefadea296bf2298270bbd0652d0b231",
+        "blockNumber": 26212351,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/paxg-ethereum-adapter.json",
+      "address": "0xE44ba3562BE254045591748481789496d8B12815",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x60233258cb012ff94a5f7283ee276e5eca574960851739538c30d3fe056a6a57",
+        "blockNumber": 26212354,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/xaut-ethereum-adapter.json",
+      "address": "0x1f033d91919FF79BB0FA66fcb378549F6746f03D",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x2ea9ee127d00d644db2cb8ae55bd2a16623d7df365287cab0c1ce9ad2da54e0a",
+        "blockNumber": 26212355,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/usde-ethereum-adapter.json",
+      "address": "0xB93e47A4901ADcCcEae4CF7ac4cc74613aBB4cf3",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x471f7d38fd3c798edfbeeac60232fb4eeb6b74df49218ca70877ce13603d3020",
+        "blockNumber": 26212356,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/usds-ethereum-adapter.json",
+      "address": "0xC05Bf3348f2cf1b6Ec127C601D0978eC59cD6F8e",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x31b3dc8d4a931550e60fb913fd07a89a5986612c330bb257ec921c6e51dee97d",
+        "blockNumber": 26212357,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/link-ethereum-adapter.json",
+      "address": "0x093A44369a75aFBC245680EB5B296bab9983557b",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xcf96f12246d59b62436853cc158b01a0fc5d2ebb163fef56815b289ed1119384",
+        "blockNumber": 26212358,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/uni-ethereum-adapter.json",
+      "address": "0xF01CFBc960A910D58dc01E5D0a57c97eCf2E5302",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x52d25bdfe4f612d78a59b6cf12971f8237ad785fbbdf943683a5cec9ef129c6d",
+        "blockNumber": 26212359,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/sky-ethereum-adapter.json",
+      "address": "0x6e1cB391C5d3Ce8aCfa8b54E89a43166a33d39C1",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x61fcdbd365d2fd7eaad3142f964830693c25d1ec457722900a709c6cd75c6504",
+        "blockNumber": 26212361,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/aapl-ethereum-adapter.json",
+      "address": "0xbf09E3FA640dfc83C81543BC2dA7A7Ec2FA30767",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xac8744d733a615df0d0f3afb7c09c1672343fbe2fa70c931c87a954ab9528dd8",
+        "blockNumber": 26212362,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/amd-ethereum-adapter.json",
+      "address": "0x52386039CBC6C80B0c8B70ea9901393824e44E5e",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xc0c82dde8091ec7c30edb50b24945e4ea36db5248cbe2b8e79cc471af45375c0",
+        "blockNumber": 26212363,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/crcl-ethereum-adapter.json",
+      "address": "0x632B01694fFadbC04b025845Ad555b1F10D64340",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xe465216df4994944e674b06720b52e9276a225f80488841a6752df62249eb8e8",
+        "blockNumber": 26212364,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/gme-ethereum-adapter.json",
+      "address": "0x871BC70C0d14015754909d71e51331454C56120d",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xade1dc14e38daca53e0baaf4b621e6f5d2483e3f78b1ca878bce9bbc75cdc78a",
+        "blockNumber": 26212365,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/googl-ethereum-adapter.json",
+      "address": "0x301eC97e7620339A5cC955DA8f2271F613F5ba50",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x33e75cf04c08e475589042325cda2f6e7361084d3137059d30c28dcba9bd41b9",
+        "blockNumber": 26212368,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/intc-ethereum-adapter.json",
+      "address": "0xbFABbe98303B78159C15dE8CdA6c04f2213e72D1",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x8034e834da2d6cb09fab2ac0b3b427af65099b225b05144404dc7e4078bf6db2",
+        "blockNumber": 26212369,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/mrna-ethereum-adapter.json",
+      "address": "0xEB8C79CA79913974cB44686133ea3e451AA17ae2",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xb523258ac407f65d3f333e9cce042df5933f40b0415d345f4daa3ddc3648c7e3",
+        "blockNumber": 26212370,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/msft-ethereum-adapter.json",
+      "address": "0x78E535dD90C11a30dBadFBCb9621648236756Ca4",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x41d41309a017db537654ea5cc867340abaf70057f55957dc7e5ccfe22753ffe0",
+        "blockNumber": 26212374,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/mstr-ethereum-adapter.json",
+      "address": "0x76B2813Ba6Bb0e1cF33908ef7C7876a2F7B457B0",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x12f7e1918d4613c10aff908299f2b32647a9b0e61e1a0f962e1c6597638176ff",
+        "blockNumber": 26212375,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/mu-ethereum-adapter.json",
+      "address": "0x57F2Bc7947AF0146c768c0C150FAA6E04776f93E",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x4527ef79bbd24b4d8ef9a10ab566e309e3cfc57e2aaff3870e857705a0418faa",
+        "blockNumber": 26212376,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/nflx-ethereum-adapter.json",
+      "address": "0x05fDe3a3CC3b77AEb39504DB812A8aa83b4C3f4d",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xcd2f75aebe289d96a0b9b079d30c53bd71969b4fc2ed5ec1d301519cc8b8ce47",
+        "blockNumber": 26212377,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/nvda-ethereum-adapter.json",
+      "address": "0x25df0345D524c982d68f99187AB79CFC9FDEF225",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x6207992c78a00feef1afc63f86e3326b66dbf37c2c240594fb0c8ded3da7f945",
+        "blockNumber": 26212378,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/sndk-ethereum-adapter.json",
+      "address": "0x00E31E70F1d2Ee4bB06c237bcd366417106DcCfb",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x5566721029d96eb1229a9a5654f667c4d05178f744944b214b9acd87255016b4",
+        "blockNumber": 26212379,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/spcx-ethereum-adapter.json",
+      "address": "0x88B931ad2F1d9809f786E396c467b031876ef9BB",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x3b5df0e0601298b112909bc4e162b379c8d39da1ff2e59d0ff5bf86db3656924",
+        "blockNumber": 26212380,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/tsla-ethereum-adapter.json",
+      "address": "0x262d46113849EF2948845a9f10ee109164469c98",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xbe57b6864aac3c7e074062a9573ea27b2e94fe3f718e255f1dd03c595fdbd3eb",
+        "blockNumber": 26212381,
+        "gasUsed": "28647",
+        "gasLimit": "55593"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usdt-anubis-alt-oft.json",
+      "address": "0xA0bD8B3d33718F623C5C1F1551B5B069f6a4F127",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xd1876ab9ad01e9a2269e2527c8a283a5c78d1dd2631c4f32af5c0d9cf4ac65c8",
+        "blockNumber": 16711366,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usdc-anubis-alt-oft.json",
+      "address": "0x283B21431130544D8DE08756313EF06A38a2a81e",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x66836a29103ea6e8fe8b1a54d4f01a9f651e4bd0269d56c4d9f716c7f4aab1e6",
+        "blockNumber": 16711371,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/dai-anubis-alt-oft.json",
+      "address": "0x9aB7638f85eCfb449Cef84d11e2Da69694B3b792",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xc6088174ddb4c2103159caadcc11bf69c9ccf103c720fd5d4577b942407712ff",
+        "blockNumber": 16711377,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/wbtc-anubis-alt-oft.json",
+      "address": "0x5133b6Ff1F013cf1CE82ff8430fCdd57a16ab6ef",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x4a861f374acbb1e7135b18b462b8321f805f4e7e92aa31036a73445a8e67f38d",
+        "blockNumber": 16711382,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/eth-anubis-alt-oft.json",
+      "address": "0xf0Cf5B49E8cd02573EC2F76Ab3b357A7Eab7bE3d",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x0a3dc8fd7c63697250b9b4f20998e74e5aa018d1a0dd36250be759f066eb68f9",
+        "blockNumber": 16711388,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usd1-anubis-alt-oft.json",
+      "address": "0x820d2B28c34f87195ab32055c054Ce84d43d1360",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x2919c3debeeb1082edf713e46c20ef164165e0107dad3008715b27193a75c336",
+        "blockNumber": 16711393,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/paxg-anubis-alt-oft.json",
+      "address": "0x7A0B1fA85d1E89116256D5250d4c368D752c3e79",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xa3cae25872598599bcfdfeff690199f6be414bcb146b185e2c659d23e6f0f247",
+        "blockNumber": 16711398,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/xaut-anubis-alt-oft.json",
+      "address": "0xdDfEAA69B9351156BE245915C3f1ce45Ac7c0544",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xee65643416091dd17e914426f8e4842ce758d0ded5fddaa36a7c53446ba4c5c6",
+        "blockNumber": 16711404,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usde-anubis-alt-oft.json",
+      "address": "0x6F0cA9A07690905CfbfC6c75ac8F69fCea4ebD38",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x7d8716ba749c960362e2484932c25373c9ebd84e3fd186150c28bbb3a5361a57",
+        "blockNumber": 16711410,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usds-anubis-alt-oft.json",
+      "address": "0xA6DB5061A613176aB8F8ae868BF22C1c3dD88363",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x0ea320b5d3b51625ad9db54b422df3dfffe8a5dadf316c8df32441a3117ea22b",
+        "blockNumber": 16711416,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/link-anubis-alt-oft.json",
+      "address": "0x5c79e306FBEE477F0F727138080d0EAb0f7556A4",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xc930160347b14daf8964d81d929b75518fb53e67cae6efa50f1778e7dce6c52d",
+        "blockNumber": 16711421,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/uni-anubis-alt-oft.json",
+      "address": "0x75112Cb111A2b51de4846cD0183545f28F6e3E16",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xa07023e44d0c2d2b3a62c3e3010215a285da32b613f30a03a53f05040d9da5e2",
+        "blockNumber": 16711426,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/sky-anubis-alt-oft.json",
+      "address": "0x1fF6Ea9AbBa7C7d9F524962A5d32899cda47655e",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xe70804d7f80a12d17d81df0a5a975fc32ce05cc1225e4ff1966344ab50039ad5",
+        "blockNumber": 16711432,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/aapl-anubis-alt-oft.json",
+      "address": "0xc6D0778718d40f31422e60F25299A04878E8d9c2",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x4f57f87d55fb8c02d5d95a903742aa7d3935fd661f27e65b9062e6c9238d0014",
+        "blockNumber": 16711437,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/amd-anubis-alt-oft.json",
+      "address": "0x7c2Ff3733683817b66834B29562A6AF4A70eF7F9",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x83f1caf66280c86deda57ece4968cc66b9fabafb23c39257e46bf01408fb8294",
+        "blockNumber": 16711443,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/crcl-anubis-alt-oft.json",
+      "address": "0xD578D5f983DA24F27F5506fA5285eE54778AC8FF",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xfaa767f209afbd8913b0767e016456b17b0dd2b894a49c8b101707a001de420e",
+        "blockNumber": 16711448,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/gme-anubis-alt-oft.json",
+      "address": "0x033815B275eDA321BcCFa5487728CBc7f87bEb20",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xe9cd2a01d8b2f4f905fa3dc7695c60d242649fcffb01a422dca1b6ed830d9b21",
+        "blockNumber": 16711454,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/googl-anubis-alt-oft.json",
+      "address": "0xa37e25C021851F49A14F3490BE2C410b8A2226f8",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x7a73daf8f75fe2e07d3836b26c650b3baed35aa5e9eb4c70c67505f297ab9bf7",
+        "blockNumber": 16711459,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/intc-anubis-alt-oft.json",
+      "address": "0x7c29CE7AaA51C3Cc671805449a79078d926babc3",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xd17c25dc067cc288792905ab245ed5671c3f617c8d37fb33fac0b24727dfec7b",
+        "blockNumber": 16711465,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/mrna-anubis-alt-oft.json",
+      "address": "0x551F93186CC1a123481b7BBC11D056a899d7B9e1",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x55ec6cba572b26e5f8e3d74db442731a3901bc056a9ac353ef62c5e47c4a591f",
+        "blockNumber": 16711470,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/msft-anubis-alt-oft.json",
+      "address": "0xc8fA84483EEbF11f2A7F61ACc0417e84e7043845",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x7fb193cd21467ce77d8ad5a97e1e122af48b45748b3ef5122a2f37ed4062075b",
+        "blockNumber": 16711476,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/mstr-anubis-alt-oft.json",
+      "address": "0x0dFD1c436ddCAfe468eEa8d67e47a5BB315f389c",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x482cd123d8cf4bda950020c53407502a75f3f8ad30ef237faf448b39f50e9a4c",
+        "blockNumber": 16711481,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/mu-anubis-alt-oft.json",
+      "address": "0x567c7f4587532FF4645D46c2546e80ADE6782B12",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x0ea99465f74b0ad6af6fa700079cb56ddcebea9c2f08f94d94bff141b3131535",
+        "blockNumber": 16711487,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/nflx-anubis-alt-oft.json",
+      "address": "0xA77609896bb3D6D4dB05D06C957CB0C611f58f31",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xd8ba58d9f4305525ff7114aff24b49ea4ca9175ca955a2780a427f78129e9d26",
+        "blockNumber": 16711493,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/nvda-anubis-alt-oft.json",
+      "address": "0xcc1b7bc3dDEC73986C63E878C7C81e614d030A5d",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xdfbca35827a3ac1ff0da51f2fd5dbf5ad09be132373d1f5fd8309811c5daf96b",
+        "blockNumber": 16711498,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/sndk-anubis-alt-oft.json",
+      "address": "0x51dbea18a37b503C1207b6B6cEB678182f72a91e",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xa589ebac526c55f420a87f80779ef8666fb559e890dee838e53ef674cbabadff",
+        "blockNumber": 16711503,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/spcx-anubis-alt-oft.json",
+      "address": "0x4AB3Dab17a8607F874Cd9987ee57Fc972BEe8D04",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0xf4e4d56042722ffc551b8e33848aba41ef9503b8d1c09040f52818705cd5cf02",
+        "blockNumber": 16711509,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/tsla-anubis-alt-oft.json",
+      "address": "0x2700fdFfBBC8bE673e80B7faF8a302F5B5196C90",
+      "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x10e0f87d8429a1efb15c74a4e24aa8f33b278fed9ff4fc0264796a335417eb0f",
+        "blockNumber": 16711515,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-multihop-composer-v2-production.json",
+      "address": "0xEBB1998d94fe21889A28c65226556bBaac843172",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": null,
+      "kind": "composer",
+      "tx": {
+        "hash": "0x4172d30b898d5ae98e68c41898f9535686bd1faa17cdc4ff52b2b6dfae3cf109",
+        "blockNumber": 26212395,
+        "gasUsed": "28669",
+        "gasLimit": "55623"
+      }
+    }
+  ],
+  "completedAt": "2026-10-17T12:53:09.486Z",
+  "status": "completed",
+  "final": [
+    {
+      "network": "ethereum",
+      "rel": "ethereum-eth-native-adapter.json",
+      "address": "0x99c880f03055351A17bDa275E7C165fdeFF89fA5",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-usdt-adapter.json",
+      "address": "0xC2e75F4dB642Cf1b8b5ca9A1DC0450DaE9505352",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-usdc-adapter.json",
+      "address": "0xcDDF41841f6e0D2611f8f4326f872C0490Cb50d1",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-dai-adapter.json",
+      "address": "0x2E20D21CD928d662aE52eF86690043f93F14faF0",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "wbtc8-ethereum-adapter.json",
+      "address": "0x713441E6e7865ad91C3A89620dff1CdAd49900A6",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/usd1-ethereum-adapter.json",
+      "address": "0x7298E75dbAF188BaA2e528188cf253C97D85B60b",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/paxg-ethereum-adapter.json",
+      "address": "0xE44ba3562BE254045591748481789496d8B12815",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/xaut-ethereum-adapter.json",
+      "address": "0x1f033d91919FF79BB0FA66fcb378549F6746f03D",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/usde-ethereum-adapter.json",
+      "address": "0xB93e47A4901ADcCcEae4CF7ac4cc74613aBB4cf3",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/usds-ethereum-adapter.json",
+      "address": "0xC05Bf3348f2cf1b6Ec127C601D0978eC59cD6F8e",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/link-ethereum-adapter.json",
+      "address": "0x093A44369a75aFBC245680EB5B296bab9983557b",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/uni-ethereum-adapter.json",
+      "address": "0xF01CFBc960A910D58dc01E5D0a57c97eCf2E5302",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "mainstream-assets/sky-ethereum-adapter.json",
+      "address": "0x6e1cB391C5d3Ce8aCfa8b54E89a43166a33d39C1",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/aapl-ethereum-adapter.json",
+      "address": "0xbf09E3FA640dfc83C81543BC2dA7A7Ec2FA30767",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/amd-ethereum-adapter.json",
+      "address": "0x52386039CBC6C80B0c8B70ea9901393824e44E5e",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/crcl-ethereum-adapter.json",
+      "address": "0x632B01694fFadbC04b025845Ad555b1F10D64340",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/gme-ethereum-adapter.json",
+      "address": "0x871BC70C0d14015754909d71e51331454C56120d",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/googl-ethereum-adapter.json",
+      "address": "0x301eC97e7620339A5cC955DA8f2271F613F5ba50",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/intc-ethereum-adapter.json",
+      "address": "0xbFABbe98303B78159C15dE8CdA6c04f2213e72D1",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/mrna-ethereum-adapter.json",
+      "address": "0xEB8C79CA79913974cB44686133ea3e451AA17ae2",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/msft-ethereum-adapter.json",
+      "address": "0x78E535dD90C11a30dBadFBCb9621648236756Ca4",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/mstr-ethereum-adapter.json",
+      "address": "0x76B2813Ba6Bb0e1cF33908ef7C7876a2F7B457B0",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/mu-ethereum-adapter.json",
+      "address": "0x57F2Bc7947AF0146c768c0C150FAA6E04776f93E",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/nflx-ethereum-adapter.json",
+      "address": "0x05fDe3a3CC3b77AEb39504DB812A8aa83b4C3f4d",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/nvda-ethereum-adapter.json",
+      "address": "0x25df0345D524c982d68f99187AB79CFC9FDEF225",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/sndk-ethereum-adapter.json",
+      "address": "0x00E31E70F1d2Ee4bB06c237bcd366417106DcCfb",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/spcx-ethereum-adapter.json",
+      "address": "0x88B931ad2F1d9809f786E396c467b031876ef9BB",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ondo-stocks/tsla-ethereum-adapter.json",
+      "address": "0x262d46113849EF2948845a9f10ee109164469c98",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usdt-anubis-alt-oft.json",
+      "address": "0xA0bD8B3d33718F623C5C1F1551B5B069f6a4F127",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usdc-anubis-alt-oft.json",
+      "address": "0x283B21431130544D8DE08756313EF06A38a2a81e",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/dai-anubis-alt-oft.json",
+      "address": "0x9aB7638f85eCfb449Cef84d11e2Da69694B3b792",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/wbtc-anubis-alt-oft.json",
+      "address": "0x5133b6Ff1F013cf1CE82ff8430fCdd57a16ab6ef",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/eth-anubis-alt-oft.json",
+      "address": "0xf0Cf5B49E8cd02573EC2F76Ab3b357A7Eab7bE3d",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usd1-anubis-alt-oft.json",
+      "address": "0x820d2B28c34f87195ab32055c054Ce84d43d1360",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/paxg-anubis-alt-oft.json",
+      "address": "0x7A0B1fA85d1E89116256D5250d4c368D752c3e79",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/xaut-anubis-alt-oft.json",
+      "address": "0xdDfEAA69B9351156BE245915C3f1ce45Ac7c0544",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usde-anubis-alt-oft.json",
+      "address": "0x6F0cA9A07690905CfbfC6c75ac8F69fCea4ebD38",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/usds-anubis-alt-oft.json",
+      "address": "0xA6DB5061A613176aB8F8ae868BF22C1c3dD88363",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/link-anubis-alt-oft.json",
+      "address": "0x5c79e306FBEE477F0F727138080d0EAb0f7556A4",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/uni-anubis-alt-oft.json",
+      "address": "0x75112Cb111A2b51de4846cD0183545f28F6e3E16",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/sky-anubis-alt-oft.json",
+      "address": "0x1fF6Ea9AbBa7C7d9F524962A5d32899cda47655e",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/aapl-anubis-alt-oft.json",
+      "address": "0xc6D0778718d40f31422e60F25299A04878E8d9c2",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/amd-anubis-alt-oft.json",
+      "address": "0x7c2Ff3733683817b66834B29562A6AF4A70eF7F9",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/crcl-anubis-alt-oft.json",
+      "address": "0xD578D5f983DA24F27F5506fA5285eE54778AC8FF",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/gme-anubis-alt-oft.json",
+      "address": "0x033815B275eDA321BcCFa5487728CBc7f87bEb20",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/googl-anubis-alt-oft.json",
+      "address": "0xa37e25C021851F49A14F3490BE2C410b8A2226f8",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/intc-anubis-alt-oft.json",
+      "address": "0x7c29CE7AaA51C3Cc671805449a79078d926babc3",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/mrna-anubis-alt-oft.json",
+      "address": "0x551F93186CC1a123481b7BBC11D056a899d7B9e1",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/msft-anubis-alt-oft.json",
+      "address": "0xc8fA84483EEbF11f2A7F61ACc0417e84e7043845",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/mstr-anubis-alt-oft.json",
+      "address": "0x0dFD1c436ddCAfe468eEa8d67e47a5BB315f389c",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/mu-anubis-alt-oft.json",
+      "address": "0x567c7f4587532FF4645D46c2546e80ADE6782B12",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/nflx-anubis-alt-oft.json",
+      "address": "0xA77609896bb3D6D4dB05D06C957CB0C611f58f31",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/nvda-anubis-alt-oft.json",
+      "address": "0xcc1b7bc3dDEC73986C63E878C7C81e614d030A5d",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/sndk-anubis-alt-oft.json",
+      "address": "0x51dbea18a37b503C1207b6B6cEB678182f72a91e",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/spcx-anubis-alt-oft.json",
+      "address": "0x4AB3Dab17a8607F874Cd9987ee57Fc972BEe8D04",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "anubis",
+      "rel": "anubis-alt-ofts/tsla-anubis-alt-oft.json",
+      "address": "0x2700fdFfBBC8bE673e80B7faF8a302F5B5196C90",
+      "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+      "kind": "oapp"
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-multihop-composer-v2-production.json",
+      "address": "0xEBB1998d94fe21889A28c65226556bBaac843172",
+      "owner": "0x8893335CB1d4638020c66A88C08726373F119169",
+      "delegate": null,
+      "kind": "composer"
+    }
+  ]
+}

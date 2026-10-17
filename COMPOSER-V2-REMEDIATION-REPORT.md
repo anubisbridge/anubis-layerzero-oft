@@ -4,7 +4,7 @@ Date: 14 October 2026
 
 ## Scope
 
-This remediation addresses the audit findings against `AnubisMultiHopComposer` and aligns Anubis-side WBTC/XAUt token precision with their Ethereum assets. The XAUt Anubis peer was replaced without changing its Ethereum Adapter or Composer route. Owner/delegate migration to a Safe and token-issuer operational approvals remain separate follow-up work.
+This remediation addresses the audit findings against `AnubisMultiHopComposer` and aligns Anubis-side WBTC/XAUt token precision with their Ethereum assets. The XAUt Anubis peer was replaced without changing its Ethereum Adapter or Composer route. Owner/delegate migration to the production Safes is complete; token-issuer operational approvals remain a separate follow-up item.
 
 ## Active deployment
 
@@ -12,7 +12,8 @@ This remediation addresses the audit findings against `AnubisMultiHopComposer` a
 - Ethereum address: [`0xEBB1998d94fe21889A28c65226556bBaac843172`](https://etherscan.io/address/0xEBB1998d94fe21889A28c65226556bBaac843172#code)
 - Deployment transaction: [`0x82f7a46afcdb5287ee3e91757025307517441260f896afef95bd67e3327527aa`](https://etherscan.io/tx/0x82f7a46afcdb5287ee3e91757025307517441260f896afef95bd67e3327527aa)
 - Endpoint: `0x1a44076050125825900e736c501f859c50fE728c`
-- Owner: `0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a`
+- Ethereum Composer Owner: `0x8893335CB1d4638020c66A88C08726373F119169` (2/3 Safe)
+- Anubis OApp Owner and Endpoint delegate: `0xC78E137279E245E8Da0C09C60F56bB695cb35358` (2/3 Safe)
 - Etherscan source verification: passed
 
 ## Findings and remediation
@@ -66,9 +67,9 @@ An existing route can be disabled without calling either OFT, and `removeRoute()
 
 The integration request now requires at least 800,000 `lzCompose` gas for the Ethereum Hub Composer, with a higher dynamically estimated value permitted. Gas-starved and empty-reason failures revert instead of entering the refund branch.
 
-### H-2 — Concentrated owner/delegate authority: acknowledged, deferred
+### H-2 — Concentrated owner/delegate authority: migrated to Safe
 
-No permission migration was performed in this scope. Owner and Endpoint delegate migration to a Safe/timelock is planned separately. This does not require another Composer redeployment.
+The production permission migration was completed on 17 October 2026. The Ethereum Composer and all Ethereum OApps now use the Ethereum `2/3` Safe; all Anubis OApps use the Anubis `2/3` Safe. Endpoint delegates were changed before ownership, and both stages were read back on-chain. No Composer or OFT redeployment was required. See [`SAFE-OWNER-DELEGATE-MIGRATION-2026-10-17.md`](SAFE-OWNER-DELEGATE-MIGRATION-2026-10-17.md).
 
 ### M-1 — Underlying Adapter transfer behavior: reviewed and accepted
 
@@ -112,5 +113,5 @@ The 15 reviewed Ondo Ethereum OFTs return `approvalRequired() == false` and use 
 
 ## Remaining launch gates
 
-1. Transfer Owner/Delegate roles to the approved Safe/timelock.
+1. Keep the production Safe membership, threshold and signing process documented and operational.
 2. Complete issuer and compliance confirmation for Ondo assets.
