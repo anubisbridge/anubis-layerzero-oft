@@ -13,6 +13,38 @@
   "delegateTransactions": [
     {
       "network": "ethereum",
+      "rel": "ethereum-eth-native-adapter.json",
+      "address": "0x99c880f03055351A17bDa275E7C165fdeFF89fA5",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x569e64fc767927c5a2b302b80fc2f7cf8687b2c2c43aa8a6ac5e49638a7e7540",
+        "blockNumber": 26212276,
+        "gasUsed": "33739",
+        "gasLimit": "54326",
+        "gasPrice": "52690292"
+      }
+    },
+    {
+      "network": "ethereum",
+      "rel": "ethereum-usdt-adapter.json",
+      "address": "0xC2e75F4dB642Cf1b8b5ca9A1DC0450DaE9505352",
+      "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
+      "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+      "kind": "oapp",
+      "tx": {
+        "hash": "0x7eb4fa460cc8cad63ca0285c7d1857f3b1e050bd536e75aa6f4c236ae56a2fe4",
+        "blockNumber": 26212283,
+        "gasUsed": "33739",
+        "gasLimit": "54326",
+        "gasPrice": "52154246"
+      }
+    },
+    {
+      "network": "ethereum",
       "rel": "ethereum-usdc-adapter.json",
       "address": "0xcDDF41841f6e0D2611f8f4326f872C0490Cb50d1",
       "endpoint": "0x1a44076050125825900e736c501f859c50fE728c",
