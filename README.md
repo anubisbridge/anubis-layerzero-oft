@@ -46,7 +46,7 @@ No self-managed BSC, Polygon, Solana, Tron, Avalanche or HyperEVM route is inclu
 - Ethereum Composer: [`0xEBB1998d94fe21889A28c65226556bBaac843172`](https://etherscan.io/address/0xEBB1998d94fe21889A28c65226556bBaac843172#code)
 - Ethereum Owner and Endpoint delegate: `0x8893335CB1d4638020c66A88C08726373F119169` (2/3 Safe)
 - Anubis Owner and Endpoint delegate: `0xC78E137279E245E8Da0C09C60F56bB695cb35358` (2/3 Safe)
-- The production permission migration was completed on 17 October 2026. See [`SAFE-OWNER-DELEGATE-MIGRATION-2026-10-17.md`](SAFE-OWNER-DELEGATE-MIGRATION-2026-10-17.md).
+- The production permission migration was completed on 17 October 2026, with the active WBTC8 follow-up completed and read back on 20 October 2026. See [`SAFE-OWNER-DELEGATE-MIGRATION-2026-10-17.md`](SAFE-OWNER-DELEGATE-MIGRATION-2026-10-17.md).
 - Anubis Endpoint fee token reported at deployment: `0x83fd06F0846d9D90B3016bF670Efe2E0B11cDe14`
 
 ## Asset contracts

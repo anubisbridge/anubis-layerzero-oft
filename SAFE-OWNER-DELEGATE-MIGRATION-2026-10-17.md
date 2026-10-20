@@ -33,4 +33,14 @@ The production permission migration was completed after the Safe addresses and m
 
 Detailed transaction hashes and read-back data are included in [`safe-owner-delegate-migration-2026-10-17.json`](safe-owner-delegate-migration-2026-10-17.json).
 
+## WBTC8 follow-up
+
+On 20 October 2026, a follow-up read-back identified that the 17 October batch had migrated the retired 18-decimal WBTC contract instead of the current 8-decimal WBTC OFTAlt. The active WBTC8 contract, `0x287A0E98feC5c41fbaf53B63882a602a24d21640`, was corrected without redeployment:
+
+- Endpoint delegate transaction: [`0xe094fc454249ff851b56b9cb2e452ab5537200acfcbcf2310a65603b1dd03fce`](https://anubisscan.io/tx/0xe094fc454249ff851b56b9cb2e452ab5537200acfcbcf2310a65603b1dd03fce)
+- Ownership transfer transaction: [`0xc7824e5fc8d60df9fb59039862550ef903329df04c10e0252d2457c631061fe4`](https://anubisscan.io/tx/0xc7824e5fc8d60df9fb59039862550ef903329df04c10e0252d2457c631061fe4)
+- Final Owner and Endpoint delegate: `0xC78E137279E245E8Da0C09C60F56bB695cb35358`
+
+The correction and final read-back are recorded in [`wbtc8-safe-owner-delegate-migration-2026-10-20.json`](wbtc8-safe-owner-delegate-migration-2026-10-20.json). A fresh on-chain audit then confirmed all 28 Ethereum Adapters and all 28 active Anubis OFTAlt contracts use their corresponding 2/3 Safe as both Owner and Endpoint delegate.
+
 The three Safe owners and the `2/3` threshold are unchanged. Future Owner-controlled configuration changes must be proposed and executed through the corresponding Safe with two owner signatures.

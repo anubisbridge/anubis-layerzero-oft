@@ -1,0 +1,39 @@
+{
+  "executedAt": "2026-10-20T07:56:03.704Z",
+  "network": "anubis",
+  "chainId": 6714,
+  "asset": "WBTC",
+  "contract": "0x287A0E98feC5c41fbaf53B63882a602a24d21640",
+  "endpoint": "0x76111de813f83aaadbd62773bf41247634e2319a",
+  "signer": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+  "targetSafe": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+  "before": {
+    "owner": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a",
+    "delegate": "0x59Dc82A7Ee06d825035D444A9064e8307Fa7977a"
+  },
+  "transactions": {
+    "setDelegate": {
+      "hash": "0xe094fc454249ff851b56b9cb2e452ab5537200acfcbcf2310a65603b1dd03fce",
+      "blockNumber": 16951750,
+      "gasUsed": "33728"
+    },
+    "transferOwnership": {
+      "hash": "0xc7824e5fc8d60df9fb59039862550ef903329df04c10e0252d2457c631061fe4",
+      "blockNumber": 16951755,
+      "gasUsed": "28669"
+    }
+  },
+  "after": {
+    "owner": "0xC78E137279E245E8Da0C09C60F56bB695cb35358",
+    "delegate": "0xC78E137279E245E8Da0C09C60F56bB695cb35358"
+  },
+  "fullReadback": {
+    "ethereumAdapters": 28,
+    "ethereumOwnersAtSafe": 28,
+    "ethereumDelegatesAtSafe": 28,
+    "anubisOFTAltContracts": 28,
+    "anubisOwnersAtSafe": 28,
+    "anubisDelegatesAtSafe": 28
+  },
+  "verified": true
+}
